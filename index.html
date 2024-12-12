@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <script src="script 12.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+        }
+        
+        header {
+            background-color: #343a40;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            color: white !important;
+            padding: 10px 15px;
+        }
+
+        .nav-link:hover {
+            background-color: #495057;
+            border-radius: 5px;
+        }
+
+        .group-info p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        aside {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline-primary {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-photo {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .student-photo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer ul {
+            padding-left: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer ul li a img {
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header class="py-3 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/bmw.png" alt="Logo" style="width: 50px; height: 50px;">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="био.html" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="первый семестр.html" class="nav-link">Первый семестр</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Второй семестр</a></li>
+                    <li class="nav-item"><a href="Untitled-1.html" class="nav-link">Услуги</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Авторизация</a></li>
+                </ul>
+            </nav>
+            <div class="group-info text-end">
+                <p class="mb-0">Группа ЭФБО-08-23</p>
+                <p class="mb-0">Ковалев Данила Викторович</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Контент -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Сайдбар -->
+            <aside class="col-md-3">
+                <h5 class="mb-3">Навигация:</h5>
+                <a href="#" class="btn btn-outline-primary btn-sm d-block mb-2">Фронтенд</a>
+                <a href="#" class="btn btn-outline-primary btn-sm d-block">Бэкенд</a>
+            </aside>
+
+            <!-- Основной контент -->
+            <main class="col-md-9">
+                <h1>Добро пожаловать на наш сайт!</h1>
+                <p>Меня зовут Ковалев Данила Викторович, и я начинающий специалист по веб-разработке.</p>
+
+                <div class="content row mt-4">
+                    <!-- Фронтенд -->
+                    <div class="col-md-8">
+                        <h2 class="text-center text-danger">Фронтенд</h2>
+                        <p>Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы.</p>
+                        <div class="video mb-4">
+                            <iframe src="https://rutube.ru/play/embed/b94571b47899c99cd1e31ffc2118f804" frameBorder="0" allow="clipboard-write; autoplay" allowFullScreen></iframe>
+                        </div>
+                        <p>Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных.</p>
+                        <div class="video">
+                            <iframe src="https://rutube.ru/play/embed/12ba160ed4be3257de52748984fc0880" frameBorder="0" allow="clipboard-write; autoplay" allowFullScreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Изображение -->
+                    <div class="col-md-4 text-center">
+                        <img src="img/e77800ac-f22e-4b3e-ac86-7d75a3631648.jfif" alt="User Image" class="img-fluid rounded-circle student-photo" style="max-width: 150px;">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p class="mb-0">&copy; Ковалев Данила Викторович, права защищены. 2024</p>
+        <ul class="list-inline mt-2">
+            <li class="list-inline-item"><a href="https://vk.com" target="_blank"><img src="img/icons8-vk-50.png" alt="vkontakte"></a></li>
+            <li class="list-inline-item"><a href="https://www.whatsapp.com" target="_blank"><img src="img/wt.png" alt="whatsapp"></a></li>
+        </ul>
+    </footer>
+    <button onclick="toggleVisibility('.content')">Переключить видимость</button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Изменение текста H1
+        const h1 = document.querySelector('h1');
+        if (h1) {
+            h1.textContent = 'Добро пожаловать на наш сайт!';
+
+            // Добавление обработчика события click
+            h1.addEventListener('click', () => {
+                alert('Вы кликнули на заголовок - так держать!');
+            });
+        }
+
+        // Изменение цвета текста H2
+        const h2 = document.querySelector('h2');
+        if (h2) {
+            h2.style.color = 'red';
+        }
+
+        // Изменение текста первого параграфа
+        const firstParagraph = document.querySelector('p');
+        if (firstParagraph) {
+            firstParagraph.textContent = 'Это новый текст параграфа.';
+        }
+
+        // Скрытие встроенного видео
+        const video = document.querySelector('.video iframe');
+        if (video) {
+            video.style.display = 'none';
+        }
+    </script>
+
+    <script>
+        // Добавление обработчиков событий для фото студента
+        const studentPhoto = document.querySelector('.student-photo');
+
+        if (studentPhoto) {
+            // Увеличение размера при наведении
+            studentPhoto.addEventListener('mouseover', () => {
+                studentPhoto.style.transform = 'rotate(360deg)';
+                studentPhoto.style.transition = 'transform 0.3s ease';
+            });
+
+            // Возврат к исходному размеру при убирании курсора
+            studentPhoto.addEventListener('mouseout', () => {
+                studentPhoto.style.transform = 'rotate(0deg)';
+            });
+
+            // Замена изображения при клике
+            studentPhoto.addEventListener('click', () => {
+                studentPhoto.src = "img/teacher.jpg"; // Укажите путь к фотографии преподавателя
+            });
+
+            // Обработчик события dblclick
+            studentPhoto.addEventListener('dblclick', () => {
+                alert('Не налегай, у меня не так много любимых преподавателей');
+            });
+        }
+    </script>
+</body>
+
+</html>

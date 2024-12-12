@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш сайт</title>
+    <link rel="stylesheet" href="style 2.css">
+</head>
+<body>
+    <div class="page" id="two">
+        <header>
+            <div>
+                <img src="img/bmw.png" alt="Logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="первый семестр.html">Первый семестр</a></li>
+                    <li><a href="#">Второй семестр</a></li>
+                    <li><a href="Untitled-1.html">Услуги</a></li>
+                    <li><a href="#">Авторизация</a></li>
+                </ul>
+            </nav>
+            <div class="group-info">
+                <p>Группа ЭФБО-08-23<p>
+                <p>Ковалев Данила Викторович<p>
+            </div>
+        </header>
+
+        <div class="container">
+            <aside>
+                <p>Навигация:</p>
+                <a href="#">Фронтенд</a>
+                <a href="#">Бэкенд</a>
+            </aside>
+
+            <main>
+                <h1>Разработка веб-приложений</h1>
+                <div class="web-dev-section">
+                    <div class="web-app">
+                        <img src="img/desigo-room-automation.jpg" alt="Сайт-визитка" class="app-image">
+                        <p>Сайт-визитка</p>
+                        <button id="openModal1">Открыть форму</button>
+                    </div>
+                    <div class="web-app">
+                        <img src="img/egb.jpg" alt="Корпоративный сайт" class="app-image">
+                        <p>Корпоративный сайт</p>
+                        <button id="openModal2">Открыть форму</button>
+                    </div>
+                    <div class="web-app">
+                        <img src="img/XXL_height.webp" alt="Интернет-магазин" class="app-image">
+                        <p>Интернет-магазин</p>
+                        <button id="openModal3">Открыть форму</button>
+                    </div>
+                </div>
+                <p>Нужно срочно найти мастера? Профи — поиск специалистов · 900 видов услуг. На рынке с 2014 года. Индивидуальный подход. Поиск по вашим критериям. Уже 14 млн клиентов. Более 8 млн отзывов</p>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; Ковалев Данила Викторович, права защищены. 2024</p>
+            <ul class="social-links">
+                <a href="https://vk.com" target="_blank" rel="noopener noreferrer">
+                    <img src="img/icons8-vk-50.png" alt="vkontakte">
+                </a>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                    <img src="img/wt.png" alt="whatsapp">
+                </a>
+            </ul>
+        </footer>
+
+        <div id="modal-form" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Разработка веб-приложения</h2>
+                <p>Заполните форму и мы обязательно свяжемся с вами в ближайшее время для уточнения деталей</p>
+                <form id="appForm">
+                    <label for="name">Как вас зовут</label>
+                    <input type="text" id="name" name="name" placeholder="например Иванов Иван Иванович" required>
+
+                    <label for="email">Ваш e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="test@mail.ru" required>
+
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 919 999 99 99" required>
+
+                    <label for="country">Страна</label>
+                    <select id="country" name="country">
+                        <option value="Россия">Россия</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Украина">Украина</option>
+                        <option value="Казахстан">Казахстан</option>
+                    </select>
+
+                    <label for="date">Дата</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="comments">Комментарий</label>
+                    <textarea id="comments" name="comments" placeholder=""></textarea>
+
+                    <label>
+                        <input type="checkbox" required> Согласен на обработку моих персональных данных
+                    </label>
+
+                    <button type="submit">Отправить заявку</button>
+                    <p id="success-message">Форма отправлена!</p>
+
+                </form>
+            </div>
+        </div>
+
+        <script>
+            const modal = document.getElementById("modal-form");
+            const openButtons = [document.getElementById("openModal1"), document.getElementById("openModal2"), document.getElementById("openModal3")];
+            const closeModal = document.querySelector(".close");
+
+            openButtons.forEach(button => {
+                button.onclick = function() {
+                    modal.style.display = "block";
+                };
+            });
+
+            closeModal.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+
+        <script>
+            // Часть 2: Работа с объектами
+            const formData = {
+                name: "",
+                email: "",
+                phone: "",
+                country: "",
+                date: "",
+                comments: "",
+                printData() {
+                    console.log(`Имя: ${this.name}`);
+                    console.log(`E-mail: ${this.email}`);
+                    console.log(`Телефон: ${this.phone}`);
+                    console.log(`Страна: ${this.country}`);
+                    console.log(`Дата: ${this.date}`);
+                    console.log(`Комментарий: ${this.comments}`);
+                },
+            };
+
+            function validateEmail(email) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+
+            function submitForm(event) {
+                event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const country = document.getElementById("country").value;
+                const date = document.getElementById("date").value;
+                const comments = document.getElementById("comments").value.trim();
+
+                // Проверки
+                if (!name || !email || !comments) {
+                    alert("Поля 'Имя', 'E-mail' и 'Комментарий' обязательны для заполнения.");
+                    return;
+                }
+
+                if (!/^\+?[0-9\s\-]+$/.test(phone)) {
+                    alert("Телефон должен содержать только цифры, пробелы, тире и, возможно, '+' в начале.");
+                    return;
+                }
+
+                if (!validateEmail(email)) {
+                    alert("Введите корректный e-mail.");
+                    return;
+                }
+
+                // Заполнение объекта
+                formData.name = name;
+                formData.email = email;
+                formData.phone = phone;
+                formData.country = country;
+                formData.date = date;
+                formData.comments = comments;
+
+                // Вывод данных
+                formData.printData();
+
+                // Отображение сообщения
+                const successMessage = document.getElementById("success-message");
+                successMessage.style.display = "block";
+
+                // Скрытие модального окна через 2 секунды
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    successMessage.style.display = "none";
+                }, 2000);
+            }
+
+            // Часть 3: Обработчик формы
+            const appForm = document.getElementById("appForm");
+            appForm.addEventListener("submit", submitForm);
+        </script>
+
+    </div>
+</body>
+</html>
